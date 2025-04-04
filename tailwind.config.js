@@ -4,6 +4,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
@@ -15,8 +16,14 @@ module.exports = {
         lightBg: "#F8F9FA", // Fond clair
         accent: "#4F46E5", // Violet/Bleu
       },
-      fontFamily: {
-        sans: ["var(--font-inter)"], // Nous utiliserons Inter comme police principale
+      backgroundColor: {
+        primary: "#10B981",
+      },
+      textColor: {
+        primary: "#10B981",
+      },
+      borderColor: {
+        primary: "#10B981",
       },
     },
   },
