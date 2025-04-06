@@ -12,10 +12,48 @@ import {
   SiPrisma,
   SiMysql,
   SiPostgresql,
-  SiMongodb,
   SiPostman,
   SiJira,
+  SiCanva,
+  SiPython,
+  SiVite,
 } from "react-icons/si";
+
+// SVG pour Apollo
+const ApolloIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    className="w-6 h-6"
+  >
+    <path d="M128 0C57.31 0 0 57.31 0 128s57.31 128 128 128 128-57.31 128-128S198.69 0 128 0zm0 240c-61.76 0-112-50.24-112-112S66.24 16 128 16s112 50.24 112 112-50.24 112-112 112zm-8-176h16v96h-16zm0 112h16v16h-16z" />
+  </svg>
+);
+
+// SVG pour AWS
+const AwsIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    fill="currentColor"
+    className="w-6 h-6"
+  >
+    <path d="M4.91 16.36a.5.5 0 0 0-.82.57 11.5 11.5 0 0 0 18.82 2.1.5.5 0 0 0-.74-.67 10.5 10.5 0 0 1-17.26-2zm22.18-.72a.5.5 0 0 0-.82-.57 10.5 10.5 0 0 1-17.26 2 .5.5 0 0 0-.74.67 11.5 11.5 0 0 0 18.82-2.1zM16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2zm0 26a12 12 0 1 1 12-12 12 12 0 0 1-12 12z" />
+  </svg>
+);
+
+// SVG pour VS Code
+const VsCodeIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    fill="currentColor"
+    className="w-6 h-6"
+  >
+    <path d="M29.49 6.37 23.5 3.1a2.5 2.5 0 0 0-2.5.09L3.6 14.2a1 1 0 0 0 0 1.6l17.4 11a2.5 2.5 0 0 0 2.5.09l6-3.27a2.5 2.5 0 0 0 1.26-2.18V8.55a2.5 2.5 0 0 0-1.27-2.18zM21.5 25.5 5.6 15.5l15.9-10zm7-2.77-5 2.73V6.54l5 2.73z" />
+  </svg>
+);
 
 interface SkillsSectionProps {
   locale: string;
@@ -46,6 +84,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
         { name: "React", icon: <FaReact />, color: "#61DAFB" },
         { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
         { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06B6D4" },
+        { name: "Vite", icon: <SiVite />, color: "#646CFF" },
       ],
     },
     {
@@ -58,6 +97,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
         { name: "NestJS", icon: <SiNestjs />, color: "#E0234E" },
         { name: "GraphQL", icon: <SiGraphql />, color: "#E10098" },
         { name: "Prisma", icon: <SiPrisma />, color: "#2D3748" },
+        { name: "Apollo", icon: <ApolloIcon />, color: "#311C87" },
       ],
     },
     {
@@ -67,7 +107,6 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
       skills: [
         { name: "MySQL", icon: <SiMysql />, color: "#4479A1" },
         { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
-        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
       ],
     },
     {
@@ -79,6 +118,10 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
         { name: "Docker", icon: <FaDocker />, color: "#2496ED" },
         { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
         { name: "Jira", icon: <SiJira />, color: "#0052CC" },
+        { name: "AWS", icon: <AwsIcon />, color: "#FF9900" },
+        { name: "VS Code", icon: <VsCodeIcon />, color: "#007ACC" },
+        { name: "Canva", icon: <SiCanva />, color: "#00C4CC" },
+        { name: "Python", icon: <SiPython />, color: "#3776AB" },
       ],
     },
   ];
@@ -130,7 +173,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
   return (
     <section
       id="skills"
-      className="py-20 bg-white dark:bg-darkBg transition-colors duration-300"
+      className="py-20 bg-gray-100 dark:bg-darkBg transition-colors duration-300"
     >
       <div className="container mx-auto px-4">
         <motion.div

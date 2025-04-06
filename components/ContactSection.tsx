@@ -29,10 +29,45 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validateForm = () => {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
+    ) {
+      setFormStatus({
+        success: false,
+        message:
+          locale === "fr"
+            ? "Veuillez remplir tous les champs obligatoires."
+            : "Please fill in all required fields.",
+      });
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setFormStatus({
+        success: false,
+        message:
+          locale === "fr"
+            ? "Veuillez entrer une adresse email valide."
+            : "Please enter a valid email address.",
+      });
+      return false;
+    }
+
+    return true;
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setFormStatus(null);
+
+    if (!validateForm()) {
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const result = await emailjs.sendForm(
@@ -56,6 +91,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
           subject: "",
           message: "",
         });
+
+        setTimeout(() => {
+          setFormStatus(null);
+        }, 5000);
       }
     } catch (error) {
       setFormStatus({
@@ -65,6 +104,12 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
             ? "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer."
             : "An error occurred while sending the message. Please try again.",
       });
+
+      // Masquer la notification après 5 secondes
+      setTimeout(() => {
+        setFormStatus(null);
+      }, 5000);
+
       console.error("EmailJS error:", error);
     } finally {
       setIsSubmitting(false);
@@ -140,7 +185,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
   return (
     <section
       id="contact"
-      className="min-h-screen py-20 bg-white dark:bg-darkBg transition-colors duration-300"
+      className="min-h-screen py-20 bg-gray-100 dark:bg-darkBg transition-colors duration-300"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -225,7 +270,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
               </h4>
               <div className="flex space-x-4">
                 <motion.a
-                  href="https://github.com/"
+                  href="https://github.com/Landrytido"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
@@ -236,7 +281,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
                 </motion.a>
 
                 <motion.a
-                  href="https://linkedin.com/"
+                  href="https://linkedin.com/in/landry-tido-atikeng"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
@@ -342,8 +387,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-gray-800 text-gray-800 dark:text-white"
                   placeholder={
                     locale === "fr"
-                      ? "Sujet de votre message"
-                      : "Subject of your message"
+                      ? "Exemple : Demande de collaboration"
+                      : "Example: Collaboration request"
                   }
                 />
               </div>

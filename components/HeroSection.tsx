@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiArrowDown } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import { CodeBackground } from "./CodeBackground";
 
 interface HeroSectionProps {
   locale: string;
@@ -129,6 +130,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent opacity-30 dark:opacity-20"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.03)_0.5%),radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.03)_0.5%),radial-gradient(circle_at_50%_80%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.03)_0.5%),radial-gradient(circle_at_70%_10%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.03)_0.5%),radial-gradient(circle_at_90%_90%,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.03)_0.5%)] dark:bg-opacity-100 bg-opacity-0"></div>
+        <div className="absolute inset-0 overflow-hidden">
+          <CodeBackground />
+        </div>
       </div>
 
       <div className="container mx-auto px-4 z-10">
