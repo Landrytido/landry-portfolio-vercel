@@ -59,7 +59,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({ locale }) => {
   return (
     <section
       id="education"
-      className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+      className="min-h-screen py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 flex items-center"
     >
       <div className="container mx-auto px-4">
         <motion.div

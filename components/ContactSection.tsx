@@ -35,12 +35,11 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
     setFormStatus(null);
 
     try {
-      // Remplacez ces valeurs par vos propres clés EmailJS
       const result = await emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_n3hlcr8",
+        "template_r98h0nn",
         formRef.current!,
-        "YOUR_PUBLIC_KEY"
+        "ekqY2nzD88f4w5vXZ"
       );
 
       if (result.text === "OK") {
@@ -51,7 +50,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
               ? "Votre message a été envoyé avec succès !"
               : "Your message has been sent successfully!",
         });
-        // Reset form data
         setFormData({
           name: "",
           email: "",
@@ -73,7 +71,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
     }
   };
 
-  // Animation variants
   const sectionVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -143,7 +140,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
   return (
     <section
       id="contact"
-      className="py-20 bg-white dark:bg-darkBg transition-colors duration-300"
+      className="min-h-screen py-20 bg-white dark:bg-darkBg transition-colors duration-300"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -197,10 +194,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
                   Email
                 </h4>
                 <a
-                  href="mailto:your-email@example.com"
+                  href="mailto:landrytido727@gmail.com"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
                 >
-                  your-email@example.com
+                  landrytido727@gmail.com
                 </a>
               </div>
             </div>
@@ -214,10 +211,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
                   {locale === "fr" ? "Téléphone" : "Phone"}
                 </h4>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+32465362609"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
                 >
-                  +123 456 7890
+                  +32465362609
                 </a>
               </div>
             </div>
@@ -250,7 +247,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
                 </motion.a>
 
                 <motion.a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/+32465362609"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"

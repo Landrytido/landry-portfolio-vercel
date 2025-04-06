@@ -33,7 +33,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ locale }) => {
   return (
     <section
       id="about"
-      className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+      className="min-h-screen py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 flex items-center"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -65,7 +65,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({ locale }) => {
             transition={{ duration: 0.6 }}
           >
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary">
-              {/* Remplacer le placeholder par votre photo */}
               <Image
                 src="/images/placeholder-profile.jpg"
                 alt="Landry Tido"

@@ -77,7 +77,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
 
   return (
     <motion.section
-      className="pt-32 pb-20 md:pt-40 md:pb-32 bg-lightBg dark:bg-darkBg transition-colors duration-300"
+      className="min-h-screen flex flex-col items-center justify-center bg-lightBg dark:bg-darkBg transition-colors duration-300"
       initial="hidden"
       animate="visible"
     >
