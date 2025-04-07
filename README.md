@@ -145,23 +145,6 @@ Le site est optimisé pour offrir une expérience utilisateur fluide sur tous le
 
 Les thèmes clair et sombre sont gérés avec `next-themes`. Personnalisez les couleurs dans `tailwind.config.js` :
 
-```js
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          light: "#...",
-          dark: "#...",
-        },
-        // Ajoutez vos couleurs personnalisées ici
-      },
-    },
-  },
-  // ...
-};
-```
-
 ### Langues
 
 Pour ajouter une nouvelle langue :
@@ -177,16 +160,6 @@ Pour ajouter ou modifier des projets :
 1. Ajoutez les images dans `public/projects/`
 2. Modifiez le fichier `src/components/sections/ProjectsSection.tsx`
 3. Mettez à jour les traductions pour les descriptions de projets
-
-## 👥 Contribution
-
-Les contributions sont les bienvenues ! Pour contribuer :
-
-1. Forkez le projet
-2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/amazing-feature`)
-3. Validez vos modifications (`git commit -m 'Add amazing feature'`)
-4. Poussez vers la branche (`git push origin feature/amazing-feature`)
-5. Ouvrez une Pull Request
 
 ## 📝 Licence
 
