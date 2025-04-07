@@ -6,8 +6,6 @@
 
 Un portfolio moderne et interactif développé avec **Next.js**, mettant en avant mes compétences et projets en développement web.
 
-![Aperçu du portfolio](https://via.placeholder.com/800x400?text=Aperçu+du+Portfolio)
-
 ## 📋 Table des matières
 
 - [Fonctionnalités](#-fonctionnalités)
