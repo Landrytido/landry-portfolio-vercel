@@ -13,7 +13,6 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  // Navigation items
   const navItems = [
     { id: "about", labelFr: "À propos", labelEn: "About" },
     { id: "skills", labelFr: "Compétences", labelEn: "Skills" },
@@ -23,12 +22,10 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
     { id: "contact", labelFr: "Contact", labelEn: "Contact" },
   ];
 
-  // Fix hydration issues with next-themes
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Function to handle smooth scrolling for navigation
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -36,13 +33,10 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
       setIsMenuOpen(false);
     }
   };
-
-  // Toggle theme between light and dark
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  // Don't render theme toggle until component is mounted
   if (!mounted) return null;
 
   return (
@@ -54,7 +48,6 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
     >
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <motion.div
             className="font-bold text-xl text-primary"
             whileHover={{ scale: 1.05 }}
@@ -63,7 +56,6 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
             <span className="text-black dark:text-white">T</span>
           </motion.div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <button
@@ -76,9 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
             ))}
           </nav>
 
-          {/* Theme and Language Controls */}
           <div className="flex items-center space-x-4">
-            {/* Language Switcher */}
             <div className="flex space-x-2 text-sm">
               <button
                 onClick={() => changeLanguage("fr")}
@@ -103,7 +93,6 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
               </button>
             </div>
 
-            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
@@ -116,7 +105,6 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
               )}
             </button>
 
-            {/* Mobile Menu Button */}
             <button
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -131,7 +119,6 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <motion.nav
             className="md:hidden pt-4 pb-2"

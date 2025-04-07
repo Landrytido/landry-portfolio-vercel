@@ -5,7 +5,6 @@ const LoadingScreen: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simuler un temps de chargement de 2 secondes
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -13,7 +12,6 @@ const LoadingScreen: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Si le chargement est terminé, ne pas afficher le composant
   if (!loading) return null;
 
   return (
@@ -88,16 +86,3 @@ const LoadingScreen: React.FC = () => {
 };
 
 export default LoadingScreen;
-
-// Ajoutez ce style dans votre fichier globals.css
-/*
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-dash {
-  animation: dash 2s linear forwards;
-}
-*/

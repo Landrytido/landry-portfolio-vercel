@@ -43,7 +43,6 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ locale }) => {
     },
   ];
 
-  // Animation variants
   const sectionVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -126,7 +125,6 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ locale }) => {
                 variants={experienceVariants}
                 custom={index}
               >
-                {/* Timeline dot */}
                 <div className="absolute -left-[25px] p-2 bg-primary rounded-full text-white">
                   <FiBriefcase className="w-4 h-4" />
                 </div>

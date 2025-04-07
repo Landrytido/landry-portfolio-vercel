@@ -19,7 +19,6 @@ import {
   SiVite,
 } from "react-icons/si";
 
-// SVG pour Apollo
 const ApolloIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +30,6 @@ const ApolloIcon = () => (
   </svg>
 );
 
-// SVG pour AWS
 const AwsIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +41,6 @@ const AwsIcon = () => (
   </svg>
 );
 
-// SVG pour VS Code
 const VsCodeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +123,6 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
     },
   ];
 
-  // Animation variants
   const sectionVariants = {
     hidden: { opacity: 0 },
     visible: {

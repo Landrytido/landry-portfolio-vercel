@@ -33,7 +33,6 @@ const EducationSection: React.FC<EducationSectionProps> = ({ locale }) => {
     },
   ];
 
-  // Animation variants
   const sectionVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -96,7 +95,6 @@ const EducationSection: React.FC<EducationSectionProps> = ({ locale }) => {
                 variants={educationVariants}
                 custom={index}
               >
-                {/* Timeline dot */}
                 <div className="absolute -left-[25px] p-2 bg-primary rounded-full text-white">
                   <FiBook className="w-4 h-4" />
                 </div>

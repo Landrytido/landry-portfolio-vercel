@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 export const CodeBackground = () => {
-  // Array of code symbols
   const codeSymbols = [
     "{",
     "}",
@@ -24,7 +23,6 @@ export const CodeBackground = () => {
     "return",
   ];
 
-  // Generate random positions for symbols (Layer 1 - Foreground)
   const layerOne = Array.from({ length: 25 }, (_, i) => ({
     id: `front-${i}`,
     symbol: codeSymbols[Math.floor(Math.random() * codeSymbols.length)],
@@ -37,7 +35,6 @@ export const CodeBackground = () => {
     delay: Math.random() * 5,
   }));
 
-  // Generate random positions for symbols (Layer 2 - Background)
   const layerTwo = Array.from({ length: 30 }, (_, i) => ({
     id: `mid-${i}`,
     symbol: codeSymbols[Math.floor(Math.random() * codeSymbols.length)],
@@ -59,7 +56,6 @@ export const CodeBackground = () => {
 
   return (
     <div className="w-full h-full" style={{ position: "absolute", zIndex: 5 }}>
-      {/* Foreground symbols */}
       {layerOne.map((item) => (
         <motion.div
           key={item.id}
@@ -74,7 +70,7 @@ export const CodeBackground = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: [0, item.opacity, 0],
-            y: [0, Math.random() * 10 - 5, 0], // Subtle floating effect
+            y: [0, Math.random() * 10 - 5, 0],
           }}
           transition={{
             duration: item.duration,
@@ -88,7 +84,6 @@ export const CodeBackground = () => {
         </motion.div>
       ))}
 
-      {/* Background symbols */}
       {layerTwo.map((item) => (
         <motion.div
           key={item.id}
@@ -103,7 +98,7 @@ export const CodeBackground = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: [0, item.opacity, 0],
-            y: [0, Math.random() * 10 - 5, 0], // Subtle floating effect
+            y: [0, Math.random() * 10 - 5, 0],
           }}
           transition={{
             duration: item.duration,

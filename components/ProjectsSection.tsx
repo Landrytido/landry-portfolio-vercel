@@ -89,7 +89,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
     },
   ];
 
-  // Animation variants
   const sectionVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -278,7 +277,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
           ))}
         </motion.div>
 
-        {/* Project Detail Modal */}
         {selectedProject && (
           <motion.div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-70"

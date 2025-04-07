@@ -105,7 +105,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
             : "An error occurred while sending the message. Please try again.",
       });
 
-      // Masquer la notification après 5 secondes
       setTimeout(() => {
         setFormStatus(null);
       }, 5000);
@@ -305,7 +304,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             initial="hidden"
             whileInView="visible"

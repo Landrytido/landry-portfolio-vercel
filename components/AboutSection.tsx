@@ -56,7 +56,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({ locale }) => {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          {/* Photo/Avatar */}
           <motion.div
             className="w-full lg:w-1/3 mb-10 lg:mb-0 flex justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -75,7 +74,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({ locale }) => {
             </div>
           </motion.div>
 
-          {/* Bio */}
           <motion.div
             className="w-full lg:w-2/3 lg:pl-16"
             initial="hidden"
