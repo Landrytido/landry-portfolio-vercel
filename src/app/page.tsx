@@ -12,6 +12,8 @@ import ExperienceSection from "../../components/ExperienceSection";
 import EducationSection from "../../components/EducationSection";
 import ContactSection from "../../components/ContactSection";
 import Footer from "../../components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -35,28 +37,30 @@ export default function Home() {
     setLocale(newLocale);
   };
 
-  // Don't render until mounted (to prevent theme flashing)
   if (!mounted) return null;
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-      {isLoading && <LoadingScreen />}
+    <>
+      <ToastContainer />
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        {isLoading && <LoadingScreen />}
 
-      <div className="min-h-screen bg-lightBg dark:bg-darkBg transition-colors duration-300">
-        <Navbar locale={locale} changeLanguage={changeLanguage} />
+        <div className="min-h-screen bg-lightBg dark:bg-darkBg transition-colors duration-300">
+          <Navbar locale={locale} changeLanguage={changeLanguage} />
 
-        <main>
-          <HeroSection locale={locale} />
-          <AboutSection locale={locale} />
-          <SkillsSection locale={locale} />
-          <ProjectsSection locale={locale} />
-          <ExperienceSection locale={locale} />
-          <EducationSection locale={locale} />
-          <ContactSection locale={locale} />
-        </main>
+          <main>
+            <HeroSection locale={locale} />
+            <AboutSection locale={locale} />
+            <SkillsSection locale={locale} />
+            <ProjectsSection locale={locale} />
+            <ExperienceSection locale={locale} />
+            <EducationSection locale={locale} />
+            <ContactSection locale={locale} />
+          </main>
 
-        <Footer locale={locale} />
-      </div>
-    </ThemeProvider>
+          <Footer locale={locale} />
+        </div>
+      </ThemeProvider>
+    </>
   );
 }

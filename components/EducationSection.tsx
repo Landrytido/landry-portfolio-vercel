@@ -13,6 +13,8 @@ interface Education {
   institution: string;
   dateFr: string;
   dateEn: string;
+  locationFr: string;
+  locationEn: string;
   descriptionFr?: string;
   descriptionEn?: string;
 }
@@ -21,15 +23,31 @@ const EducationSection: React.FC<EducationSectionProps> = ({ locale }) => {
   const educations: Education[] = [
     {
       id: "bachelor",
-      degreeFr: "Bachelier en Informatique de gestion",
-      degreeEn: "Bachelor in Business Computing",
-      institution: "EAFC UCCLE",
-      dateFr: "2022-2025",
-      dateEn: "2022-2025",
+      degreeFr: "Informatique de Gestion",
+      degreeEn: "Business Computing",
+      institution: "EAFC Uccle",
+      dateFr: "2022 – 2025",
+      dateEn: "2022 – 2025",
+      locationFr: "Uccle, Belgique",
+      locationEn: "Uccle, Belgium",
       descriptionFr:
         "Formation complète en développement web, programmation orientée objet, bases de données et gestion de projets informatiques.",
       descriptionEn:
         "Comprehensive training in web development, object-oriented programming, databases, and IT project management.",
+    },
+    {
+      id: "optometry",
+      degreeFr: "Optique optométrie",
+      degreeEn: "Optics and Optometry",
+      institution: "CESNA",
+      dateFr: "2021 – 2022",
+      dateEn: "2021 – 2022",
+      locationFr: "Namur, Belgique",
+      locationEn: "Namur, Belgium",
+      descriptionFr:
+        "Étude des principes fondamentaux de l'optique et de l'optométrie, avec une introduction aux techniques de correction visuelle.",
+      descriptionEn:
+        "Study of the fundamentals of optics and optometry, with an introduction to visual correction techniques.",
     },
   ];
 
@@ -111,8 +129,13 @@ const EducationSection: React.FC<EducationSectionProps> = ({ locale }) => {
                     </span>
                   </div>
 
-                  <p className="text-gray-700 dark:text-gray-300 font-medium mb-3">
+                  <p className="text-gray-700 dark:text-gray-300 font-medium mb-1">
                     {education.institution}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                    {locale === "fr"
+                      ? education.locationFr
+                      : education.locationEn}
                   </p>
 
                   {(locale === "fr"
