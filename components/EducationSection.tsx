@@ -117,7 +117,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({ locale }) => {
                   <FiBook className="w-4 h-4" />
                 </div>
 
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3">
                     <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
                       {locale === "fr"

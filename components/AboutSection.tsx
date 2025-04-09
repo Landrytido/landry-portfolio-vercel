@@ -1,12 +1,37 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 interface AboutSectionProps {
   locale: string;
+  // Nouvelle prop pour définir l'intervalle de changement d'image (en millisecondes)
+  imageSwapInterval?: number;
 }
 
-const AboutSection: React.FC<AboutSectionProps> = ({ locale }) => {
+const AboutSection: React.FC<AboutSectionProps> = ({
+  locale,
+  // Valeur par défaut de 5000ms (5 secondes)
+  imageSwapInterval = 5000,
+}) => {
+  // État pour suivre quelle image afficher (0 ou 1)
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  // Tableau des images à alterner
+  const profileImages = [
+    "/images/placeholder-profile.jpg",
+    "/images/placeholder-profile-2.jpg", // Assurez-vous d'avoir cette image dans votre dossier public
+  ];
+
+  // Effet pour changer l'image à intervalle régulier
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setActiveImageIndex((current) => (current === 0 ? 1 : 0));
+    }, imageSwapInterval);
+
+    // Nettoyage de l'intervalle lors du démontage du composant
+    return () => clearInterval(intervalId);
+  }, [imageSwapInterval]);
+
   const sectionVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -64,13 +89,25 @@ const AboutSection: React.FC<AboutSectionProps> = ({ locale }) => {
             transition={{ duration: 0.6 }}
           >
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary">
-              <Image
-                src="/images/placeholder-profile.jpg"
-                alt="Landry Tido"
-                fill
-                className="object-cover"
-                priority
-              />
+              {/* Utilisation d'AnimatePresence pour les transitions entre images */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeImageIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={profileImages[activeImageIndex]}
+                    alt="Landry Tido"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </motion.div>
+              </AnimatePresence>
             </div>
           </motion.div>
 

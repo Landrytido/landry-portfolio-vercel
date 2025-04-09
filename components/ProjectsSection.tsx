@@ -319,7 +319,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="bg-gray-200 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg cursor-pointer"
+              className="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg cursor-pointer"
               variants={projectVariants}
               whileHover="hover"
               onClick={() => setSelectedProject(project)}
