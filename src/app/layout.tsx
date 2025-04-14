@@ -23,8 +23,17 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/atl-logo.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* <link rel="icon" href="/atl-logo.svg" /> */}
+        <head>
+          <link rel="icon" href="/icons/favicon.ico" sizes="32x32" />
+          <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+          <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+          <link rel="manifest" href="/icons/site.webmanifest" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+        </head>
       </head>
       <body className={inter.variable}>
         {children}

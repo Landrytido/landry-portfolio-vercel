@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="100" height="100"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fond circulaire -->
+  <circle cx="50" cy="50" r="50" fill="#121212"></circle>
+  
+  <!-- Cercle d'accent -->
+  <circle cx="50" cy="50" r="45" fill="#1a1a1a"></circle>
+  
+  <!-- Arrière-plan principal -->
+  <circle cx="50" cy="50" r="40" fill="#28a745"></circle>
+  
+  <!-- Petite lueur pour effet 3D -->
+  <circle cx="35" cy="35" r="5" fill="#4bd66f" opacity="0.5"></circle>
+  
+  <!-- Initiales ATL -->
+  <g fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold">
+    <!-- A -->
+    <text x="25" y="60" font-size="26" _mstHash="2024" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}">A</text>
+    
+    <!-- T -->
+    <text x="43" y="60" font-size="26" _mstHash="2025" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}">T</text>
+    
+    <!-- L -->
+    <text x="60" y="60" font-size="26" _mstHash="2026" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}">L</text>
+  </g>
+  
+  <!-- Accent jaune -->
+  <circle cx="75" cy="38" r="5" fill="#FFE135"></circle>
+  
+  <!-- Petit accent vert clair au bas -->
+  <circle cx="25" cy="70" r="3" fill="#4bd66f"></circle>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
