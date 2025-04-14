@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,20 +25,16 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <head>
         {/* <link rel="icon" href="/atl-logo.svg" /> */}
-        <head>
-          <link rel="icon" href="/icons/favicon.ico" sizes="32x32" />
-          <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
-          <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-          <link rel="manifest" href="/icons/site.webmanifest" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-        </head>
+        <link rel="icon" href="/icons/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <link rel="manifest" href="/icons/site.webmanifest" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={inter.variable}>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
