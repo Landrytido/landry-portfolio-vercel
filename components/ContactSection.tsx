@@ -71,10 +71,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
 
     try {
       const result = await emailjs.sendForm(
-        "service_n3hlcr8",
-        "template_r98h0nn",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         formRef.current!,
-        "ekqY2nzD88f4w5vXZ"
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
       );
 
       if (result.text === "OK") {
