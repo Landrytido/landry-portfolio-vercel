@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Configuration i18n pour le SEO multilingue
   i18n: {
     locales: ["fr", "en"],
     defaultLocale: "fr",
@@ -86,24 +85,20 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Optimisation des images
   images: {
-    domains: ["landry-tido.com"], // Ton domaine
+    domains: ["landry-portfolio.vercel.app"],
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 31536000, // 1 an
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Optimisation du build
   experimental: {
     optimizePackageImports: ["framer-motion", "react-icons"],
   },
 
-  // Configuration pour le déploiement
   output: "standalone", // Pour Docker/Vercel
 
-  // PWA et manifest
   async rewrites() {
     return [
       {
