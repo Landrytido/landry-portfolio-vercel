@@ -26,7 +26,9 @@ export const metadata: Metadata = {
     "Java developer",
     "frontend backend",
   ],
-  authors: [{ name: "Landry Tido", url: "https://landry-tido.com" }],
+  authors: [
+    { name: "Landry Tido", url: "https://landry-portfolio.vercel.app" },
+  ],
   creator: "Landry Tido",
   publisher: "Landry Tido",
 
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://landry-tido.com",
+    url: "https://landry-portfolio.vercel.app",
     siteName: "Portfolio Landry Tido",
     title: "Landry Tido | Développeur Full-stack - React & Spring Boot",
     description:
@@ -80,11 +82,11 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://landry-tido.com",
+    canonical: "https://landry-portfolio.vercel.app",
     languages: {
-      fr: "https://landry-tido.com/fr",
-      en: "https://landry-tido.com/en",
-      "x-default": "https://landry-tido.com/fr",
+      fr: "https://landry-portfolio.vercel.app/fr",
+      en: "https://landry-portfolio.vercel.app/en",
+      "x-default": "https://landry-portfolio.vercel.app/fr",
     },
   },
 
@@ -128,8 +130,8 @@ export default function RootLayout({
               jobTitle: "Développeur Full-stack",
               description:
                 "Développeur Full-stack spécialisé en React, Spring Boot, TypeScript et GraphQL",
-              url: "https://landry-tido.com",
-              image: "https://landry-tido.com/images/profile.jpg",
+              url: "https://landry-portfolio.vercel.app",
+              image: "https://landry-portfolio.vercel.app/images/profile.jpg",
               email: "landrytido727@gmail.com",
               telephone: "+32465362609",
               address: {

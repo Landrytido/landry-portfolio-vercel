@@ -73,18 +73,28 @@ export default function Home() {
         />
 
         {/* Hreflang tags */}
-        <link rel="alternate" hrefLang="fr" href="https://landry-tido.com" />
-        <link rel="alternate" hrefLang="en" href="https://landry-tido.com/en" />
+        <link
+          rel="alternate"
+          hrefLang="fr"
+          href="https://landry-portfolio.vercel.app"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://landry-portfolio.vercel.app/en"
+        />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://landry-tido.com"
+          href="https://landry-portfolio.vercel.app"
         />
 
         {/* Canonical URL */}
         <link
           rel="canonical"
-          href={`https://landry-tido.com${locale === "en" ? "/en" : ""}`}
+          href={`https://landry-portfolio.vercel.app${
+            locale === "en" ? "/en" : ""
+          }`}
         />
 
         {/* Schema.org pour la page spécifique */}
@@ -94,28 +104,31 @@ export default function Home() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "@id": `https://landry-tido.com${
+              "@id": `https://landry-portfolio.vercel.app${
                 locale === "en" ? "/en" : ""
               }#webpage`,
-              url: `https://landry-tido.com${locale === "en" ? "/en" : ""}`,
+              url: `https://landry-portfolio.vercel.app${
+                locale === "en" ? "/en" : ""
+              }`,
               name: metaTags.title,
               description: metaTags.description,
               inLanguage: locale === "fr" ? "fr-FR" : "en-US",
               isPartOf: {
                 "@type": "WebSite",
-                "@id": "https://landry-tido.com#website",
-                url: "https://landry-tido.com",
+                "@id": "https://landry-portfolio.vercel.app#website",
+                url: "https://landry-portfolio.vercel.app",
                 name: "Portfolio Landry Tido",
               },
               about: {
                 "@type": "Person",
-                "@id": "https://landry-tido.com#person",
+                "@id": "https://landry-portfolio.vercel.app#person",
                 name: "Landry Tido",
               },
               primaryImageOfPage: {
                 "@type": "ImageObject",
-                "@id": "https://landry-tido.com/images/og-image.jpg",
-                url: "https://landry-tido.com/images/og-image.jpg",
+                "@id":
+                  "https://landry-portfolio.vercel.app/images/og-image.jpg",
+                url: "https://landry-portfolio.vercel.app/images/og-image.jpg",
                 width: 1200,
                 height: 630,
               },

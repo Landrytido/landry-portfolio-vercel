@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const baseUrl = process.env.SITE_URL || "https://landry-tido.com";
+  const baseUrl = process.env.SITE_URL || "https://landry-portfolio.vercel.app";
   const currentDate = new Date().toISOString();
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

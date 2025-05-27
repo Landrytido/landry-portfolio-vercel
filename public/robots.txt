@@ -7,4 +7,4 @@ Disallow: /_next/
 Disallow: /admin/
 
 # Sitemap
-Sitemap: https://landry-tido.com/sitemap.xml
+Sitemap: https://landry-portfolio.vercel.app/sitemap.xml
