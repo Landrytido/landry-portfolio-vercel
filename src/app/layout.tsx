@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Portfolio de Landry Tido, développeur Full-stack spécialisé en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, disponible pour projets freelance.",
     images: [
       {
-        url: "/images/og-image.jpg", // À créer : 1200x630px
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Portfolio de Landry Tido - Développeur Full-stack",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Landry Tido | Développeur Full-stack",
     description:
       "Portfolio de Landry Tido, développeur Full-stack spécialisé en React, Spring Boot, TypeScript et GraphQL.",
-    images: ["/images/twitter-card.jpg"], // À créer : 1200x600px
+    images: ["/images/twitter-card.jpg"],
   },
 
   // Autres meta tags
