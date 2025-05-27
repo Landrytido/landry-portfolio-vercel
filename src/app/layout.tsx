@@ -77,8 +77,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    // google: "ton-code-google-search-console", // À ajouter plus tard
-    // yandex: "ton-code-yandex", // Si pertinent
+    google: "6C_NU4a0x5wyHo00NEp9KYa01jHuMgFuh0M7QlEp_Sk",
   },
 
   alternates: {
