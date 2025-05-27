@@ -45,10 +45,26 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // // Configuration de toast à l'initialisation
-  // useEffect(() => {
-  //   toast.configure();
-  // }, []);
+  // 🚀 NOUVELLE FONCTION SEO - Génère des alt texts optimisés
+  const getProjectAltText = (project: Project, locale: string): string => {
+    const baseText = locale === "fr" ? project.titleFr : project.titleEn;
+    const techStack = project.technologies.slice(0, 3).join(", ");
+
+    const typeText =
+      locale === "fr"
+        ? project.type === "stage"
+          ? "projet de stage"
+          : project.type === "universite"
+          ? "projet universitaire"
+          : "projet personnel"
+        : project.type === "stage"
+        ? "internship project"
+        : project.type === "universite"
+        ? "university project"
+        : "personal project";
+
+    return `${baseText} - ${typeText} développé avec ${techStack}`;
+  };
 
   const projects: Project[] = [
     {
@@ -326,11 +342,14 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
               custom={index}
             >
               <div className="relative h-36 sm:h-48 overflow-hidden">
+                {/* ✅ IMAGE OPTIMISÉE SEO - Grille des projets */}
                 <Image
                   src={project.imageSrc}
-                  alt={locale === "fr" ? project.titleFr : project.titleEn}
+                  alt={getProjectAltText(project, locale)}
                   fill
                   className="object-cover transition-transform duration-300 transform hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  loading="lazy"
                 />
                 <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
                   <span className="bg-primary text-white text-xs px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs">
@@ -391,15 +410,14 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
             >
               <div className="relative">
                 <div className="h-40 sm:h-60 relative">
+                  {/* ✅ IMAGE OPTIMISÉE SEO - Modal */}
                   <Image
                     src={selectedProject.imageSrc}
-                    alt={
-                      locale === "fr"
-                        ? selectedProject.titleFr
-                        : selectedProject.titleEn
-                    }
+                    alt={getProjectAltText(selectedProject, locale)}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    priority={true}
                   />
                   <button
                     className="absolute top-2 right-2 sm:top-4 sm:right-4 p-1.5 sm:p-2 bg-black bg-opacity-50 rounded-full text-white hover:bg-opacity-70 transition-all duration-200"

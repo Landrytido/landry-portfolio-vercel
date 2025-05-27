@@ -19,7 +19,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   // Tableau des images à alterner
   const profileImages = [
     "/images/placeholder-profile.jpg",
-    "/images/placeholder-profile-2.jpg", // Assurez-vous d'avoir cette image dans votre dossier public
+    "/images/placeholder-profile-2.jpg",
   ];
 
   // Effet pour changer l'image à intervalle régulier
@@ -101,10 +101,15 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                 >
                   <Image
                     src={profileImages[activeImageIndex]}
-                    alt="Landry Tido"
+                    alt={
+                      activeImageIndex === 0
+                        ? "Landry Tido, développeur full-stack spécialisé en React et Spring Boot, portrait professionnel"
+                        : "Landry Tido au travail, développeur passionné par les technologies web modernes"
+                    }
                     fill
                     className="object-cover"
-                    priority
+                    priority={activeImageIndex === 0}
+                    sizes="(max-width: 768px) 256px, 256px"
                   />
                 </motion.div>
               </AnimatePresence>
