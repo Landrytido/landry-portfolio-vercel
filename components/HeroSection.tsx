@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiArrowDown } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import { CodeBackground } from "./CodeBackground";
 
 interface HeroSectionProps {
   locale: string;
@@ -119,34 +120,34 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
 
   return (
     <motion.section
-      className="min-h-screen flex flex-col items-center justify-center relative bg-lightBg dark:bg-darkBg transition-colors duration-300 overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center relative bg-lightBg dark:bg-darkBg transition-colors duration-300 overflow-hidden px-4"
       initial="hidden"
       animate="visible"
     >
-      {/* Background code et gradients */}
+      {/* Background code animé et gradients */}
       <div className="absolute inset-0 z-0">
-        {/* ... garde le background existant ... */}
+        <CodeBackground />
+        {/* Gradient overlay pour la lisibilité */}
+        <div className="absolute inset-0 bg-gradient-to-br from-lightBg/90 via-lightBg/95 to-lightBg/90 dark:from-darkBg/90 dark:via-darkBg/95 dark:to-darkBg/90"></div>
       </div>
 
-      <div className="container mx-auto px-4 z-10">
+      <div className="container mx-auto z-10 max-w-5xl">
         <div className="flex flex-col items-center text-center">
-          {/* Amélioration SEO : H1 plus descriptif */}
+          {/* TITRE PRINCIPAL - Espacement amélioré */}
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-6 flex items-center justify-center"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 md:mb-12 flex items-center justify-center"
             variants={titleVariants}
           >
-            {/* Structure H1 optimisée pour SEO */}
             <span className="sr-only">
               {locale === "fr"
                 ? "Landry Tido, Développeur Full-stack spécialisé en React et Spring Boot"
                 : "Landry Tido, Full-stack Developer specialized in React and Spring Boot"}
             </span>
 
-            {/* Partie visuelle du titre */}
             <span aria-hidden="true" className="flex items-center">
-              {locale === "fr" ? "S" : "H"}
+              <span className="mr-2">{locale === "fr" ? "S" : "H"}</span>
               <motion.div
-                className="inline-flex w-16 h-16 md:w-20 md:h-20 bg-secondary rounded-full justify-center items-center mx-2 md:mx-3 shadow-lg"
+                className="inline-flex w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-secondary rounded-full justify-center items-center mx-1 md:mx-2 shadow-lg"
                 animate={emojiControls}
               >
                 <span
@@ -154,19 +155,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                   aria-label={
                     locale === "fr" ? "emoji intelligent" : "smart emoji"
                   }
-                  className="text-2xl md:text-3xl"
+                  className="text-2xl md:text-3xl lg:text-4xl"
                 >
                   🤓
                 </span>
               </motion.div>
-              <span className="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
-                {locale === "fr" ? "alut!" : "ello!"}
+              <span className="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text ml-2">
+                {locale === "fr" ? "lut!" : "llo!"}
               </span>
             </span>
           </motion.h1>
 
+          {/* SOUS-TITRE - Espacement amélioré */}
           <motion.h2
-            className="text-2xl md:text-4xl font-semibold text-primary dark:text-primary mb-4"
+            className="text-2xl md:text-4xl lg:text-5xl font-semibold text-primary dark:text-primary mb-6 md:mb-8"
             variants={subtitleVariants}
           >
             {locale === "fr"
@@ -174,29 +176,33 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
               : "Full-stack Developer"}
           </motion.h2>
 
-          <motion.p
-            className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl"
+          {/* DESCRIPTION - Espacement et largeur améliorés */}
+          <motion.div
+            className="text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 mb-10 md:mb-16 max-w-4xl leading-relaxed"
             variants={textVariants}
           >
-            {locale === "fr"
-              ? "Développeur passionné spécialisé en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, disponible pour vos projets."
-              : "Passionate developer specialized in React, Spring Boot, TypeScript and GraphQL. Based in Brussels, available for your projects."}
-            <br />
-            <span className="text-secondary font-medium mt-2 inline-block">
+            <p className="mb-4 md:mb-6">
+              {locale === "fr"
+                ? "Développeur passionné spécialisé en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, disponible pour vos projets."
+                : "Passionate developer specialized in React, Spring Boot, TypeScript and GraphQL. Based in Brussels, available for your projects."}
+            </p>
+            <span className="text-secondary font-medium text-base md:text-lg lg:text-xl inline-block">
               React • Spring Boot • TypeScript • GraphQL
             </span>
-          </motion.p>
+          </motion.div>
 
-          {/* Ajouter schema.org pour l'action de téléchargement */}
+          {/* SECTION BOUTONS ET RÉSEAUX - Espacement considérablement amélioré */}
           <motion.div
-            className="flex flex-col items-center space-y-8"
+            className="flex flex-col items-center space-y-12 md:space-y-16"
             variants={buttonsVariants}
           >
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {/* Container bouton CV et réseaux sociaux */}
+            <div className="flex flex-col sm:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+              {/* Bouton CV */}
               <motion.a
                 href="/CV.pdf"
                 download="Landry-Tido-CV-Developpeur-Fullstack.pdf"
-                className="flex items-center justify-center w-20 h-20 bg-primary rounded-full shadow-md hover:shadow-lg text-white font-bold text-xl"
+                className="flex items-center justify-center w-24 h-24 md:w-28 md:h-28 bg-primary rounded-full shadow-lg hover:shadow-xl text-white font-bold text-xl md:text-2xl transition-all duration-300"
                 variants={cvButtonVariants}
                 whileHover="hover"
                 whileTap={{ scale: 0.95 }}
@@ -222,13 +228,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                 CV
               </motion.a>
 
-              {/* Amélioration des liens sociaux avec rel appropriés */}
-              <div className="flex space-x-5">
+              {/* Réseaux sociaux */}
+              <div className="flex space-x-6 md:space-x-8">
                 <motion.a
                   href="https://github.com/Landrytido"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors shadow-md"
+                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
                   variants={iconVariants}
                   custom={0}
                   whileHover="hover"
@@ -238,14 +244,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                       : "View my GitHub profile"
                   }
                 >
-                  <FiGithub className="w-6 h-6" />
+                  <FiGithub className="w-6 h-6 md:w-7 md:h-7" />
                 </motion.a>
 
                 <motion.a
                   href="https://linkedin.com/in/landry-tido-atikeng"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors shadow-md"
+                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
                   variants={iconVariants}
                   custom={1}
                   whileHover="hover"
@@ -255,12 +261,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                       : "View my LinkedIn profile"
                   }
                 >
-                  <FiLinkedin className="w-6 h-6" />
+                  <FiLinkedin className="w-6 h-6 md:w-7 md:h-7" />
                 </motion.a>
 
                 <motion.a
                   href="mailto:landrytido727@gmail.com"
-                  className="p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors shadow-md"
+                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
                   variants={iconVariants}
                   custom={2}
                   whileHover="hover"
@@ -268,14 +274,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                     locale === "fr" ? "M'envoyer un email" : "Send me an email"
                   }
                 >
-                  <FiMail className="w-6 h-6" />
+                  <FiMail className="w-6 h-6 md:w-7 md:h-7" />
                 </motion.a>
 
                 <motion.a
                   href="https://wa.me/+32465362609"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors shadow-md"
+                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
                   variants={iconVariants}
                   custom={3}
                   whileHover="hover"
@@ -285,18 +291,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                       : "Contact me on WhatsApp"
                   }
                 >
-                  <FaWhatsapp className="w-6 h-6" />
+                  <FaWhatsapp className="w-6 h-6 md:w-7 md:h-7" />
                 </motion.a>
               </div>
             </div>
 
+            {/* Call to action - Espacement généreux */}
             <motion.button
               onClick={() => {
                 document
                   .getElementById("projects")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="flex flex-col items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors group mt-4"
+              className="flex flex-col items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors group mt-8 md:mt-12"
               animate={{
                 y: [0, -10, 0],
               }}
@@ -311,10 +318,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                   : "Go to projects section"
               }
             >
-              <span className="text-base mb-2">
+              <span className="text-base md:text-lg mb-3 md:mb-4">
                 {locale === "fr" ? "Voir mes projets" : "View my projects"}
               </span>
-              <FiArrowDown className="w-5 h-5 group-hover:text-primary" />
+              <FiArrowDown className="w-5 h-5 md:w-6 md:h-6 group-hover:text-primary" />
             </motion.button>
           </motion.div>
         </div>

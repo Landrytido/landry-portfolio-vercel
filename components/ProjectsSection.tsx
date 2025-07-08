@@ -92,6 +92,32 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
       type: "stage",
     },
     {
+      id: "ocontineng-restaurant",
+      titleFr: "Site Web Restaurant O'CONTINENG",
+      titleEn: "O'CONTINENG Restaurant Website",
+      descriptionFr:
+        "Site web moderne et responsive pour un restaurant de cuisine africaine et européenne avec système de réservation intégré.",
+      descriptionEn:
+        "Modern and responsive website for an African and European cuisine restaurant with integrated reservation system.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      imageSrc: "/images/OContineng.png",
+      githubLink: "https://github.com/votre-username/ocontineng-website",
+      demoLink: "https://o-continent.vercel.app/",
+      featuresFr: [
+        "Interface multilingue (FR/EN) dynamique",
+        "Système de réservation avec WhatsApp",
+        "Menu interactif avec visualisation PDF",
+        "Galerie photos et Google Maps intégrés",
+      ],
+      featuresEn: [
+        "Dynamic multilingual interface (FR/EN)",
+        "Reservation system with WhatsApp",
+        "Interactive menu with PDF visualization",
+        "Photo gallery and Google Maps integration",
+      ],
+      type: "personnel",
+    },
+    {
       id: "ecommerce",
       titleFr: "Application Web de Vente de T-shirts",
       titleEn: "T-shirt E-commerce Website",
@@ -143,25 +169,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
       ],
       featuresEn: ["Presentation of rooms and services", "Contact form"],
       type: "personnel",
-    },
-    {
-      id: "aws-deployment",
-      titleFr: "Déploiement d'Applications sur AWS",
-      titleEn: "Application Deployment on AWS",
-      descriptionFr:
-        "Projet de mise en production cloud avec hébergement scalable.",
-      descriptionEn:
-        "Cloud production deployment project with scalable hosting.",
-      technologies: ["Amazon EC2", "Amazon RDS"],
-      imageSrc: "/images/AWS.png",
-      githubLink: "https://github.com/",
-      demoLink: "https://example.com/",
-      featuresFr: [
-        "Hébergement scalable",
-        "Connexion base de données en cloud",
-      ],
-      featuresEn: ["Scalable hosting", "Cloud database connection"],
-      type: "universite",
     },
     {
       id: "time-tracking",
