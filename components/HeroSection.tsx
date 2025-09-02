@@ -234,7 +234,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                   href="https://github.com/Landrytido"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
+                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-black dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
                   variants={iconVariants}
                   custom={0}
                   whileHover="hover"
@@ -244,14 +244,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                       : "View my GitHub profile"
                   }
                 >
-                  <FiGithub className="w-6 h-6 md:w-7 md:h-7" />
+                  <FiGithub className="w-6 h-6 md:w-7 md:h-7 drop-shadow" />
                 </motion.a>
 
                 <motion.a
                   href="https://linkedin.com/in/landry-tido-atikeng"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
+                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-black dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
                   variants={iconVariants}
                   custom={1}
                   whileHover="hover"
@@ -261,12 +261,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                       : "View my LinkedIn profile"
                   }
                 >
-                  <FiLinkedin className="w-6 h-6 md:w-7 md:h-7" />
+                  <FiLinkedin className="w-6 h-6 md:w-7 md:h-7 drop-shadow" />
                 </motion.a>
 
                 <motion.a
                   href="mailto:landrytido727@gmail.com"
-                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
+                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-black dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
                   variants={iconVariants}
                   custom={2}
                   whileHover="hover"
@@ -274,14 +274,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                     locale === "fr" ? "M'envoyer un email" : "Send me an email"
                   }
                 >
-                  <FiMail className="w-6 h-6 md:w-7 md:h-7" />
+                  <FiMail className="w-6 h-6 md:w-7 md:h-7 drop-shadow" />
                 </motion.a>
 
                 <motion.a
                   href="https://wa.me/+32465362609"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
+                  className="p-4 md:p-5 rounded-full bg-white dark:bg-gray-800 text-black dark:text-white hover:text-primary dark:hover:text-primary transition-colors shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-700"
                   variants={iconVariants}
                   custom={3}
                   whileHover="hover"
@@ -291,7 +291,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                       : "Contact me on WhatsApp"
                   }
                 >
-                  <FaWhatsapp className="w-6 h-6 md:w-7 md:h-7" />
+                  <FaWhatsapp className="w-6 h-6 md:w-7 md:h-7 drop-shadow" />
                 </motion.a>
               </div>
             </div>
