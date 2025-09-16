@@ -29,3 +29,13 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
+
+/* Correction pour éviter le chevauchement avec la navbar fixe */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Style pour les liens de navigation smooth */
+html {
+  scroll-behavior: smooth;
+}

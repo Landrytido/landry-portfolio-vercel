@@ -29,7 +29,12 @@ const Navbar: React.FC<NavbarProps> = ({ locale, changeLanguage }) => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const navbarHeight = 80; // hauteur approximative de la navbar
+      const elementPosition = section.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
       setIsMenuOpen(false);
     }
   };

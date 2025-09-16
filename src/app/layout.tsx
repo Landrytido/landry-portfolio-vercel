@@ -11,20 +11,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Landry Tido | Développeur Full-stack - React & Spring Boot",
+  title:
+    "Landry Tido | Portfolio Développeur Full-stack React & Spring Boot Bruxelles",
   description:
-    "Portfolio de Landry Tido, développeur Full-stack spécialisé en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, disponible pour projets freelance.",
+    "Portfolio de Landry Tido, développeur full-stack expert en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, spécialisé dans les applications web modernes et performantes. Disponible pour projets freelance.",
   keywords: [
+    "Landry Tido",
     "développeur full-stack",
-    "React developer",
-    "Spring Boot",
-    "TypeScript",
-    "GraphQL",
-    "développeur Bruxelles",
-    "freelance developer",
     "portfolio développeur",
+    "React developer Bruxelles",
+    "Spring Boot developer",
+    "TypeScript expert",
+    "GraphQL développeur",
+    "développeur web Bruxelles",
+    "freelance developer Belgium",
+    "portfolio Landry Tido",
     "Java developer",
-    "frontend backend",
+    "frontend backend developer",
+    "développeur Belgique",
   ],
   authors: [
     { name: "Landry Tido", url: "https://landry-portfolio.vercel.app" },
@@ -38,9 +42,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://landry-portfolio.vercel.app",
     siteName: "Portfolio Landry Tido",
-    title: "Landry Tido | Développeur Full-stack - React & Spring Boot",
+    title: "Landry Tido | Portfolio Développeur Full-stack React & Spring Boot",
     description:
-      "Portfolio de Landry Tido, développeur Full-stack spécialisé en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, disponible pour projets freelance.",
+      "Portfolio de Landry Tido, développeur full-stack expert en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, spécialisé dans les applications web modernes et performantes. Disponible pour projets freelance.",
     images: [
       {
         url: "/images/og-image.jpg",

@@ -13,6 +13,7 @@ import ExperienceSection from "../../components/ExperienceSection";
 import EducationSection from "../../components/EducationSection";
 import ContactSection from "../../components/ContactSection";
 import Footer from "../../components/Footer";
+import SEOContent from "../../components/SEOContent";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -25,6 +26,8 @@ export default function Home() {
     setMounted(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
+      // Scroll vers le haut après le chargement pour éviter tout problème de positionnement
+      window.scrollTo(0, 0);
     }, 2500);
     return () => clearTimeout(timer);
   }, []);
@@ -154,6 +157,7 @@ export default function Home() {
             <ExperienceSection locale={locale} />
             <EducationSection locale={locale} />
             <ContactSection locale={locale} />
+            <SEOContent locale={locale} />
           </main>
 
           <Footer locale={locale} />

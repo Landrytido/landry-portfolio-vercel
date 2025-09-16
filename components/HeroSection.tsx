@@ -120,7 +120,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
 
   return (
     <motion.section
-      className="min-h-screen flex flex-col items-center justify-center relative bg-lightBg dark:bg-darkBg transition-colors duration-300 overflow-hidden px-4"
+      className="min-h-screen flex flex-col items-center justify-center relative bg-lightBg dark:bg-darkBg transition-colors duration-300 overflow-hidden px-4 pt-20 md:pt-24"
       initial="hidden"
       animate="visible"
     >
@@ -183,8 +183,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
           >
             <p className="mb-4 md:mb-6">
               {locale === "fr"
-                ? "Développeur passionné spécialisé en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, disponible pour vos projets."
-                : "Passionate developer specialized in React, Spring Boot, TypeScript and GraphQL. Based in Brussels, available for your projects."}
+                ? "Landry Tido, développeur passionné spécialisé en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, je crée des applications web modernes et performantes pour transformer vos idées en solutions digitales innovantes. Disponible pour vos projets freelance."
+                : "Landry Tido, passionate developer specialized in React, Spring Boot, TypeScript and GraphQL. Based in Brussels, I create modern and performant web applications to transform your ideas into innovative digital solutions. Available for your freelance projects."}
             </p>
             <span className="text-secondary font-medium text-base md:text-lg lg:text-xl inline-block">
               React • Spring Boot • TypeScript • GraphQL
