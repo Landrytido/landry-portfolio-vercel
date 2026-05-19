@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiGithub, FiExternalLink, FiX } from "react-icons/fi";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 interface ProjectsSectionProps {
   locale: string;
@@ -55,13 +53,13 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
         ? project.type === "stage"
           ? "projet de stage"
           : project.type === "universite"
-          ? "projet universitaire"
-          : "projet personnel"
+            ? "projet universitaire"
+            : "projet personnel"
         : project.type === "stage"
-        ? "internship project"
-        : project.type === "universite"
-        ? "university project"
-        : "personal project";
+          ? "internship project"
+          : project.type === "universite"
+            ? "university project"
+            : "personal project";
 
     return `${baseText} - ${typeText} développé avec ${techStack}`;
   };
@@ -101,7 +99,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
         "Modern and responsive website for an African and European cuisine restaurant with integrated reservation system.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       imageSrc: "/images/OContineng.png",
-      githubLink: "https://github.com/votre-username/ocontineng-website",
+      githubLink: "https://github.com/Landrytido/O-CONTINENT",
       demoLink: "https://o-continent.vercel.app/",
       featuresFr: [
         "Interface multilingue (FR/EN) dynamique",
@@ -152,22 +150,45 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
       type: "personnel",
     },
     {
-      id: "hotel-website",
-      titleFr: "Site Internet pour l'Hôtel Le Printemps",
-      titleEn: "Hotel Le Printemps Website",
+      id: "aegc-web-platform",
+      titleFr: "Plateforme Web AEGC",
+      titleEn: "AEGC Web Platform",
       descriptionFr:
-        "Site vitrine présentant les chambres et services de l'hôtel.",
+        "Plateforme complète pour l'Association des Économistes et Gestionnaires du Cameroun avec gestion des membres, cotisations, working papers, activités et dashboard administrateur.",
       descriptionEn:
-        "Showcase website presenting the hotel's rooms and services.",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      imageSrc: "/images/hotel.png",
-      githubLink: "https://github.com/",
-      demoLink: "https://example.com/",
-      featuresFr: [
-        "Présentation des chambres et services",
-        "Formulaire de contact",
+        "Full-stack platform for the Association of Economists and Managers of Cameroon with membership management, annual subscriptions, working papers, activities, and an advanced admin dashboard.",
+      technologies: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Vite",
+        "CSS",
       ],
-      featuresEn: ["Presentation of rooms and services", "Contact form"],
+      imageSrc: "/images/AEGChome.png",
+      demoLink: "https://aegc-web.com/home",
+      featuresFr: [
+        "Authentification complète : inscription, connexion, réinitialisation de mot de passe",
+        "Gestion des cotisations avec workflow de validation admin",
+        "Soumission et révision de working papers avec système multi-rôles",
+        "Réservation d'activités et de formations en ligne",
+        "Dashboard admin : membres, cotisations, annonces, médias, FAQ, comité scientifique",
+        "Profil utilisateur avec édition et statut de cotisation en temps réel",
+        "Annonces planifiées avec épinglage",
+        "Paiement par virement bancaire, Orange Money ou MTN MoMo",
+      ],
+      featuresEn: [
+        "Full authentication flow: register, login, password reset",
+        "Annual membership management with admin validation workflow",
+        "Working papers submission and review with a multi-role system",
+        "Online activity and training session booking",
+        "Admin dashboard: members, subscriptions, announcements, media, FAQ, scientific committee",
+        "User profile with edit mode and real-time membership status",
+        "Scheduled announcements with pinning",
+        "Payment via bank transfer, Orange Money, or MTN MoMo",
+      ],
       type: "personnel",
     },
     {
@@ -250,16 +271,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
       },
     }),
   };
-
-  const githubMessage =
-    locale === "fr"
-      ? "Lien GitHub indisponible pour le moment."
-      : "GitHub link unavailable at the moment.";
-
-  const demoMessage =
-    locale === "fr"
-      ? "Lien Demo indisponible pour le moment."
-      : "Demo link unavailable at the moment.";
 
   const getProjectTypeLabel = (type: string): string => {
     if (locale === "fr") {
@@ -449,6 +460,33 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
                       {getProjectTypeLabel(selectedProject.type)}
                     </span>
                   </div>
+
+                  <div className="flex space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    {selectedProject.githubLink && (
+                      <a
+                        href={selectedProject.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors text-xs sm:text-sm"
+                      >
+                        <FiGithub className="mr-1 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4" />
+                        GitHub
+                      </a>
+                    )}
+
+                    {selectedProject.demoLink && (
+                      <a
+                        href={selectedProject.demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-primary text-white rounded-lg hover:bg-opacity-90 transition-colors text-xs sm:text-sm"
+                      >
+                        <FiExternalLink className="mr-1 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4" />
+                        Demo
+                      </a>
+                    )}
+                  </div>
+
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 sm:mb-6">
                     {locale === "fr"
                       ? selectedProject.descriptionFr
@@ -553,28 +591,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
                       </div>
                     </>
                   )}
-
-                  <div className="flex space-x-3 sm:space-x-4">
-                    {selectedProject.githubLink && (
-                      <button
-                        onClick={() => toast.info(githubMessage)}
-                        className="flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors text-xs sm:text-sm"
-                      >
-                        <FiGithub className="mr-1 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4" />
-                        GitHub
-                      </button>
-                    )}
-
-                    {selectedProject.demoLink && (
-                      <button
-                        onClick={() => toast.info(demoMessage)}
-                        className="flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-primary text-white rounded-lg hover:bg-opacity-90 transition-colors text-xs sm:text-sm"
-                      >
-                        <FiExternalLink className="mr-1 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4" />
-                        Demo
-                      </button>
-                    )}
-                  </div>
                 </div>
               </div>
             </motion.div>
