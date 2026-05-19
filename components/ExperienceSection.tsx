@@ -24,8 +24,8 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ locale }) => {
       titleFr: "Stagiaire Développeur Full-stack",
       titleEn: "Full-stack Developer Intern",
       company: "hdm network",
-      dateFr: "03-02-25 au 25-04-25",
-      dateEn: "02/03/25 to 04/25/25",
+      dateFr: "Févr. 2025 – Avr. 2025",
+      dateEn: "Feb. 2025 – Apr. 2025",
       descriptionFr: [
         "Développement de nouvelles fonctionnalités sur My Web Companion",
         "Implémentation d'un chronomètre avec notifications",

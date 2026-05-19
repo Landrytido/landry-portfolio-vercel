@@ -1,58 +1,53 @@
 import { motion } from "framer-motion";
 
+// PRNG déterministe — même résultat côté serveur et client, évite l'erreur d'hydratation
+const seededRandom = (seed: number): number => {
+  const x = Math.sin(seed + 1) * 10000;
+  return x - Math.floor(x);
+};
+
 export const CodeBackground = () => {
   const codeSymbols = [
-    "{",
-    "}",
-    "<>",
-    "//",
-    "=",
-    "=>",
-    "&&",
-    "||",
-    "()",
-    "[]",
-    "...",
-    "?.",
-    ".map",
-    "await",
-    "import",
-    "export",
-    "const",
-    "function",
-    "return",
+    "{", "}", "<>", "//", "=", "=>", "&&", "||",
+    "()", "[]", "...", "?.", ".map", "await", "import",
+    "export", "const", "function", "return",
   ];
 
-  const layerOne = Array.from({ length: 25 }, (_, i) => ({
-    id: `front-${i}`,
-    symbol: codeSymbols[Math.floor(Math.random() * codeSymbols.length)],
-    x: `${Math.random() * 100}%`,
-    y: `${Math.random() * 100}%`,
-    size: `${Math.random() * (1.8 - 1.2) + 1.2}rem`,
-    opacity: 0.3,
-    color: i % 3 === 0 ? "#10B981" : i % 3 === 1 ? "#4F46E5" : "#FF5722",
-    duration: Math.random() * (15 - 10) + 10,
-    delay: Math.random() * 5,
-  }));
+  const layerOne = Array.from({ length: 25 }, (_, i) => {
+    const s = i * 7;
+    return {
+      id: `front-${i}`,
+      symbol: codeSymbols[Math.floor(seededRandom(s) * codeSymbols.length)],
+      x: `${seededRandom(s + 1) * 100}%`,
+      y: `${seededRandom(s + 2) * 100}%`,
+      size: `${seededRandom(s + 3) * 0.6 + 1.2}rem`,
+      opacity: 0.3,
+      color: i % 3 === 0 ? "#10B981" : i % 3 === 1 ? "#4F46E5" : "#FF5722",
+      duration: seededRandom(s + 4) * 5 + 10,
+      delay: seededRandom(s + 5) * 5,
+      yOffset: seededRandom(s + 6) * 10 - 5,
+    };
+  });
 
-  const layerTwo = Array.from({ length: 30 }, (_, i) => ({
-    id: `mid-${i}`,
-    symbol: codeSymbols[Math.floor(Math.random() * codeSymbols.length)],
-    x: `${Math.random() * 100}%`,
-    y: `${Math.random() * 100}%`,
-    size: `${Math.random() * (1.2 - 0.8) + 0.8}rem`,
-    opacity: 0.2,
-    color:
-      i % 4 === 0
-        ? "#10B981"
-        : i % 4 === 1
-        ? "#4F46E5"
-        : i % 4 === 2
-        ? "#FF5722"
+  const layerTwo = Array.from({ length: 30 }, (_, i) => {
+    const s = i * 7 + 200;
+    return {
+      id: `mid-${i}`,
+      symbol: codeSymbols[Math.floor(seededRandom(s) * codeSymbols.length)],
+      x: `${seededRandom(s + 1) * 100}%`,
+      y: `${seededRandom(s + 2) * 100}%`,
+      size: `${seededRandom(s + 3) * 0.4 + 0.8}rem`,
+      opacity: 0.2,
+      color:
+        i % 4 === 0 ? "#10B981"
+        : i % 4 === 1 ? "#4F46E5"
+        : i % 4 === 2 ? "#FF5722"
         : "#64748B",
-    duration: Math.random() * (20 - 12) + 12,
-    delay: Math.random() * 8,
-  }));
+      duration: seededRandom(s + 4) * 8 + 12,
+      delay: seededRandom(s + 5) * 8,
+      yOffset: seededRandom(s + 6) * 10 - 5,
+    };
+  });
 
   return (
     <div className="w-full h-full" style={{ position: "absolute", zIndex: 5 }}>
@@ -70,7 +65,7 @@ export const CodeBackground = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: [0, item.opacity, 0],
-            y: [0, Math.random() * 10 - 5, 0],
+            y: [0, item.yOffset, 0],
           }}
           transition={{
             duration: item.duration,
@@ -98,7 +93,7 @@ export const CodeBackground = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: [0, item.opacity, 0],
-            y: [0, Math.random() * 10 - 5, 0],
+            y: [0, item.yOffset, 0],
           }}
           transition={{
             duration: item.duration,

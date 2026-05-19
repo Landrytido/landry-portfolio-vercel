@@ -87,9 +87,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://landry-portfolio.vercel.app",
     languages: {
-      fr: "https://landry-portfolio.vercel.app/fr",
+      fr: "https://landry-portfolio.vercel.app",
       en: "https://landry-portfolio.vercel.app/en",
-      "x-default": "https://landry-portfolio.vercel.app/fr",
+      "x-default": "https://landry-portfolio.vercel.app",
     },
   },
 

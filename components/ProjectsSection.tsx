@@ -61,7 +61,9 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
             ? "university project"
             : "personal project";
 
-    return `${baseText} - ${typeText} développé avec ${techStack}`;
+    return locale === "fr"
+      ? `${baseText} - ${typeText} développé avec ${techStack}`
+      : `${baseText} - ${typeText} developed with ${techStack}`;
   };
 
   const projects: Project[] = [
@@ -75,8 +77,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
         "Web and mobile application to optimize daily digital management (notepad, calendar, connected weather, etc.).",
       technologies: ["React", "NestJS", "GraphQL", "Prisma"],
       imageSrc: "/images/MyWeb.png",
-      githubLink: "https://github.com/",
-      demoLink: "https://example.com/",
       featuresFr: [
         "Chronomètre interactif avec notifications",
         "Widget météo connecté à une API externe",
@@ -125,8 +125,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
         "An online commerce site allowing product, order, and payment management.",
       technologies: ["React", "Spring Boot", "MySQL", "JWT"],
       imageSrc: "/images/Tshirt.png",
-      githubLink: "https://github.com/",
-      demoLink: "https://example.com/",
       featuresFr: ["Catalogue produit, panier, commandes", "Paiement sécurisé"],
       featuresEn: ["Product catalog, cart, orders", "Secure payment"],
       type: "universite",
@@ -140,8 +138,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
       descriptionEn: "Online reservation platform with time slot management.",
       technologies: ["HTML", "CSS", "Bootstrap", "Spring Boot"],
       imageSrc: "/images/Tennis.png",
-      githubLink: "https://github.com/",
-      demoLink: "https://example.com/",
       featuresFr: [
         "Réservation avec créneaux horaires",
         "Interface calendrier",
@@ -200,8 +196,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
       descriptionEn: "Application for tracking employee work hours.",
       technologies: ["Spring Boot", "Java", "Thymeleaf", "React"],
       imageSrc: "/images/TempsEmployes.png",
-      githubLink: "https://github.com/",
-      demoLink: "https://example.com/",
       featuresFr: [
         "Saisie et suivi du temps des employés",
         "Interface utilisateur interactive",

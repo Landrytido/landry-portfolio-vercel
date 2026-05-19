@@ -300,7 +300,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
             <motion.button
               onClick={() => {
                 document
-                  .getElementById("projects")
+                  .getElementById("about")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="flex flex-col items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors group mt-8 md:mt-12"

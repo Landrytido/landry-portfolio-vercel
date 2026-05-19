@@ -146,8 +146,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               variants={itemVariants}
             >
               {locale === "fr"
-                ? "Actuellement, Landry Tido travaille en entreprise sur des outils numériques avancés, tout en poursuivant son bachelier en informatique de gestion. Cette double approche académique et professionnelle me permet de rester à la pointe des dernières tendances technologiques et d'apporter une valeur ajoutée constante à mes projets."
-                : "Currently, Landry Tido works in a company on advanced digital tools, while pursuing his bachelor's degree in business computing. This dual academic and professional approach allows me to stay at the forefront of the latest technological trends and bring constant added value to my projects."}
+                ? "Actuellement, je travaille en entreprise sur des outils numériques avancés, tout en poursuivant mon bachelier en informatique de gestion. Cette double approche académique et professionnelle me permet de rester à la pointe des dernières tendances technologiques et d'apporter une valeur ajoutée constante à mes projets."
+                : "Currently, I work in a company on advanced digital tools, while pursuing my bachelor's degree in business computing. This dual academic and professional approach allows me to stay at the forefront of the latest technological trends and bring constant added value to my projects."}
             </motion.p>
 
             <motion.div
