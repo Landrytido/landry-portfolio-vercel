@@ -1,11 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  i18n: {
-    locales: ["fr", "en"],
-    defaultLocale: "fr",
-  },
-
   // Headers de sécurité et SEO
   async headers() {
     return [
@@ -98,15 +93,6 @@ const nextConfig: NextConfig = {
   },
 
   output: "standalone", // Pour Docker/Vercel
-
-  async rewrites() {
-    return [
-      {
-        source: "/sitemap.xml",
-        destination: "/api/sitemap",
-      },
-    ];
-  },
 
   // Variables d'environnement publiques
   env: {
