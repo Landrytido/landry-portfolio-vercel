@@ -1,12 +1,20 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-// PRNG déterministe — même résultat côté serveur et client, évite l'erreur d'hydratation
 const seededRandom = (seed: number): number => {
   const x = Math.sin(seed + 1) * 10000;
   return x - Math.floor(x);
 };
 
 export const CodeBackground = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const codeSymbols = [
     "{", "}", "<>", "//", "=", "=>", "&&", "||",
     "()", "[]", "...", "?.", ".map", "await", "import",
@@ -48,6 +56,11 @@ export const CodeBackground = () => {
       yOffset: seededRandom(s + 6) * 10 - 5,
     };
   });
+
+  // Rendu serveur : div vide, pas de contenu animé (évite l'erreur d'hydratation)
+  if (!isClient) {
+    return <div className="w-full h-full" style={{ position: "absolute", zIndex: 5 }} />;
+  }
 
   return (
     <div className="w-full h-full" style={{ position: "absolute", zIndex: 5 }}>
