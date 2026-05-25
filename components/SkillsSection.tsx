@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaJava, FaReact, FaGithub, FaDocker } from "react-icons/fa";
+import { FiGitBranch, FiDatabase, FiRefreshCw } from "react-icons/fi";
 import {
   SiTypescript,
   SiJavascript,
@@ -17,6 +18,8 @@ import {
   SiCanva,
   SiPython,
   SiVite,
+  SiTrello,
+  SiAsana,
 } from "react-icons/si";
 
 const ApolloIcon = () => (
@@ -121,6 +124,18 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
         { name: "Python", icon: <SiPython />, color: "#3776AB" },
       ],
     },
+    {
+      id: "analysis",
+      titleFr: "Analyse & Gestion",
+      titleEn: "Analysis & Management",
+      skills: [
+        { name: "UML", icon: <FiGitBranch />, color: "#8B5CF6" },
+        { name: "Merise", icon: <FiDatabase />, color: "#0EA5E9" },
+        { name: "Agile / Scrum", icon: <FiRefreshCw />, color: "#F59E0B" },
+        { name: "Trello", icon: <SiTrello />, color: "#0052CC" },
+        { name: "Asana", icon: <SiAsana />, color: "#F06A6A" },
+      ],
+    },
   ];
 
   const sectionVariants = {
@@ -194,8 +209,8 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
             variants={categoryVariants}
           >
             {locale === "fr"
-              ? "Mon expertise technique couvre différents domaines du développement web, du frontend au backend."
-              : "My technical expertise covers different areas of web development, from frontend to backend."}
+              ? "Du développement frontend/backend à l'analyse fonctionnelle et la gestion de projets — un profil complet au service de vos besoins."
+              : "From frontend/backend development to functional analysis and project management — a complete profile to serve your needs."}
           </motion.p>
         </motion.div>
 
@@ -206,10 +221,15 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
           viewport={{ once: true, amount: 0.1 }}
           variants={sectionVariants}
         >
-          {skillCategories.map((category) => (
+          {skillCategories.map((category, index) => (
             <motion.div
               key={category.id}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md"
+              className={`bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md ${
+                skillCategories.length % 2 !== 0 &&
+                index === skillCategories.length - 1
+                  ? "md:col-span-2"
+                  : ""
+              }`}
               variants={categoryVariants}
             >
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">

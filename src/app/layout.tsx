@@ -12,9 +12,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title:
-    "Landry Tido | Portfolio Développeur Full-stack React & Spring Boot Bruxelles",
+    "Landry Tido | Développeur Full-stack & Analyste Fonctionnel - Bruxelles",
   description:
-    "Portfolio de Landry Tido, développeur full-stack expert en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, spécialisé dans les applications web modernes et performantes. Disponible pour projets freelance.",
+    "Portfolio de Landry Tido, informaticien de gestion spécialisé en développement full-stack (React, Spring Boot, TypeScript) et en analyse fonctionnelle (UML, Merise, Agile). Basé à Bruxelles. Disponible pour projets freelance.",
   keywords: [
     "Landry Tido",
     "développeur full-stack",

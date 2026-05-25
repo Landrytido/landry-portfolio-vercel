@@ -128,8 +128,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               variants={itemVariants}
             >
               {locale === "fr"
-                ? "Passionné par le développement web et l'innovation"
-                : "Passionate about web development and innovation"}
+                ? "Développement, analyse et gestion — trois facettes, un seul profil"
+                : "Development, analysis and management — three facets, one profile"}
             </motion.h3>
 
             <motion.p
@@ -137,8 +137,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               variants={itemVariants}
             >
               {locale === "fr"
-                ? "Je suis Landry Tido, développeur full-stack passionné par l'innovation technologique et le développement web moderne. Je conçois des applications performantes et ergonomiques en utilisant les dernières technologies. Avec une expertise approfondie en React, Spring Boot, TypeScript et GraphQL, je crée des solutions robustes et scalables qui répondent aux besoins spécifiques de mes clients."
-                : "I'm Landry Tido, a full-stack developer passionate about technological innovation and modern web development. I design high-performance and ergonomic applications using the latest technologies. With deep expertise in React, Spring Boot, TypeScript, and GraphQL, I create robust and scalable solutions that meet my clients' specific needs."}
+                ? "Je suis Landry Tido, informaticien de gestion spécialisé en développement full-stack et en analyse fonctionnelle. Je conçois des applications robustes en React, Spring Boot, TypeScript et GraphQL, tout en maîtrisant la modélisation UML et Merise pour concevoir des systèmes d'information cohérents dès la phase d'analyse."
+                : "I'm Landry Tido, a business IT specialist in full-stack development and functional analysis. I build robust applications with React, Spring Boot, TypeScript and GraphQL, while mastering UML and Merise modeling to design coherent information systems from the analysis phase."}
             </motion.p>
 
             <motion.p
@@ -146,8 +146,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               variants={itemVariants}
             >
               {locale === "fr"
-                ? "Actuellement, je travaille en entreprise sur des outils numériques avancés, tout en poursuivant mon bachelier en informatique de gestion. Cette double approche académique et professionnelle me permet de rester à la pointe des dernières tendances technologiques et d'apporter une valeur ajoutée constante à mes projets."
-                : "Currently, I work in a company on advanced digital tools, while pursuing my bachelor's degree in business computing. This dual academic and professional approach allows me to stay at the forefront of the latest technological trends and bring constant added value to my projects."}
+                ? "Actuellement, je travaille en entreprise sur des outils numériques avancés, tout en finalisant mon bachelier en informatique de gestion. Cette double compétence — technique et analytique — me permet de comprendre aussi bien les contraintes du code que les besoins des utilisateurs et des organisations."
+                : "Currently, I work in a company on advanced digital tools, while completing my bachelor's degree in business computing. This dual technical and analytical skill set allows me to understand both code constraints and the needs of users and organizations."}
             </motion.p>
 
             <motion.div
@@ -176,8 +176,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                 <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
                 <span className="text-gray-700 dark:text-gray-300">
                   {locale === "fr"
-                    ? "Amateur de nouvelles technologies"
-                    : "Technology enthusiast"}
+                    ? "Analyse fonctionnelle & UML / Merise"
+                    : "Functional analysis & UML / Merise"}
                 </span>
               </div>
 
@@ -185,8 +185,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                 <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
                 <span className="text-gray-700 dark:text-gray-300">
                   {locale === "fr"
-                    ? "Apprentissage continu"
-                    : "Continuous learning"}
+                    ? "Gestion de projets Agile / Scrum"
+                    : "Agile / Scrum project management"}
                 </span>
               </div>
             </motion.div>

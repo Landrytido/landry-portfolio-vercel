@@ -172,8 +172,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
             variants={subtitleVariants}
           >
             {locale === "fr"
-              ? "Développeur Full-stack"
-              : "Full-stack Developer"}
+              ? "Développeur & Analyste Full-stack"
+              : "Full-stack Developer & Analyst"}
           </motion.h2>
 
           {/* DESCRIPTION - Espacement et largeur améliorés */}
@@ -183,11 +183,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
           >
             <p className="mb-4 md:mb-6">
               {locale === "fr"
-                ? "Landry Tido, développeur passionné spécialisé en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, je crée des applications web modernes et performantes pour transformer vos idées en solutions digitales innovantes. Disponible pour vos projets freelance."
-                : "Landry Tido, passionate developer specialized in React, Spring Boot, TypeScript and GraphQL. Based in Brussels, I create modern and performant web applications to transform your ideas into innovative digital solutions. Available for your freelance projects."}
+                ? "Landry Tido, informaticien de gestion spécialisé en développement full-stack et en analyse fonctionnelle. Je conçois des applications en React, Spring Boot, TypeScript et GraphQL, tout en maîtrisant l'analyse des besoins métier, la modélisation UML & Merise et la gestion de projets Agile. Basé à Bruxelles, disponible pour vos projets freelance."
+                : "Landry Tido, business IT specialist in full-stack development and functional analysis. I build applications with React, Spring Boot, TypeScript and GraphQL, while mastering business requirements analysis, UML & Merise modeling, and Agile project management. Based in Brussels, available for freelance projects."}
             </p>
             <span className="text-secondary font-medium text-base md:text-lg lg:text-xl inline-block">
-              React • Spring Boot • TypeScript • GraphQL
+              React • Spring Boot • TypeScript • GraphQL • UML • Merise • Agile
             </span>
           </motion.div>
 
