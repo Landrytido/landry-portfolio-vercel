@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FiGithub, FiExternalLink, FiX } from "react-icons/fi";
+import { FiGithub, FiExternalLink, FiX, FiLock } from "react-icons/fi";
 
 interface ProjectsSectionProps {
   locale: string;
@@ -16,6 +16,8 @@ interface Project {
   technologies: string[];
   imageSrc: string;
   githubLink?: string;
+  githubLinkBack?: string;
+  privateRepo?: boolean;
   demoLink?: string;
   featuresFr?: string[];
   featuresEn?: string[];
@@ -77,6 +79,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
         "Web and mobile application to optimize daily digital management (notepad, calendar, connected weather, etc.).",
       technologies: ["React", "NestJS", "GraphQL", "Prisma"],
       imageSrc: "/images/MyWeb.png",
+      privateRepo: true,
+      demoLink: "https://www.mywebcompanion.com/",
       featuresFr: [
         "Chronomètre interactif avec notifications",
         "Widget météo connecté à une API externe",
@@ -125,6 +129,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
         "An online commerce site allowing product, order, and payment management.",
       technologies: ["React", "Spring Boot", "MySQL", "JWT"],
       imageSrc: "/images/Tshirt.png",
+      githubLink: "https://github.com/Landrytido/TshirtFrontend",
+      githubLinkBack: "https://github.com/Landrytido/TshirtBack",
       featuresFr: ["Catalogue produit, panier, commandes", "Paiement sécurisé"],
       featuresEn: ["Product catalog, cart, orders", "Secure payment"],
       type: "universite",
@@ -138,6 +144,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
       descriptionEn: "Online reservation platform with time slot management.",
       technologies: ["HTML", "CSS", "Bootstrap", "Spring Boot"],
       imageSrc: "/images/Tennis.png",
+      githubLink: "https://github.com/Landrytido/Tennis",
       featuresFr: [
         "Réservation avec créneaux horaires",
         "Interface calendrier",
@@ -164,6 +171,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
         "CSS",
       ],
       imageSrc: "/images/AEGChome.png",
+      privateRepo: true,
       demoLink: "https://aegc-web.com/home",
       featuresFr: [
         "Authentification complète : inscription, connexion, réinitialisation de mot de passe",
@@ -196,6 +204,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
       descriptionEn: "Application for tracking employee work hours.",
       technologies: ["Spring Boot", "Java", "Thymeleaf", "React"],
       imageSrc: "/images/TempsEmployes.png",
+      privateRepo: true,
       featuresFr: [
         "Saisie et suivi du temps des employés",
         "Interface utilisateur interactive",
@@ -455,7 +464,14 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
                     </span>
                   </div>
 
-                  <div className="flex space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                  <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+                    {selectedProject.privateRepo && !selectedProject.githubLink && (
+                      <span className="flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300 rounded-lg text-xs sm:text-sm cursor-default">
+                        <FiLock className="mr-1 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4" />
+                        {locale === "fr" ? "Repo privé" : "Private repo"}
+                      </span>
+                    )}
+
                     {selectedProject.githubLink && (
                       <a
                         href={selectedProject.githubLink}
@@ -464,7 +480,19 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ locale }) => {
                         className="flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors text-xs sm:text-sm"
                       >
                         <FiGithub className="mr-1 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4" />
-                        GitHub
+                        {selectedProject.githubLinkBack ? "Frontend" : "GitHub"}
+                      </a>
+                    )}
+
+                    {selectedProject.githubLinkBack && (
+                      <a
+                        href={selectedProject.githubLinkBack}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors text-xs sm:text-sm"
+                      >
+                        <FiGithub className="mr-1 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4" />
+                        Backend
                       </a>
                     )}
 

@@ -45,9 +45,9 @@ const EducationSection: React.FC<EducationSectionProps> = ({ locale }) => {
       locationFr: "Namur, Belgique",
       locationEn: "Namur, Belgium",
       descriptionFr:
-        "Étude des principes fondamentaux de l'optique et de l'optométrie, avec une introduction aux techniques de correction visuelle.",
+        "Première expérience dans l'enseignement supérieur, avant une reconversion vers l'informatique de gestion. Ce parcours atypique témoigne de ma capacité d'adaptation et de ma détermination à me réorienter vers le domaine qui me correspond.",
       descriptionEn:
-        "Study of the fundamentals of optics and optometry, with an introduction to visual correction techniques.",
+        "First experience in higher education, before retraining in business IT. This unconventional path reflects my adaptability and determination to redirect toward a field that truly suits me.",
     },
   ];
 
@@ -76,7 +76,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({ locale }) => {
   return (
     <section
       id="education"
-      className="min-h-screen py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 flex items-center"
+      className="py-24 min-h-[75vh] flex items-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="container mx-auto px-4">
         <motion.div

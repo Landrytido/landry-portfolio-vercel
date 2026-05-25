@@ -80,7 +80,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ locale }) => {
   return (
     <section
       id="experience"
-      className="min-h-screen py-20 bg-gray-100 dark:bg-darkBg transition-colors duration-300 flex items-center"
+      className="py-24 min-h-[75vh] flex items-center bg-gray-100 dark:bg-darkBg transition-colors duration-300"
     >
       <div className="container mx-auto px-4">
         <motion.div

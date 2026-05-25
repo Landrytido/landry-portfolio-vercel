@@ -272,33 +272,36 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
                   href="https://github.com/Landrytido"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                  className="p-4 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary hover:bg-gray-300 dark:hover:bg-gray-700 transition-all shadow-sm hover:shadow-md"
                   variants={iconVariants}
                   whileHover="hover"
+                  aria-label="GitHub"
                 >
-                  <FiGithub className="w-5 h-5" />
+                  <FiGithub className="w-6 h-6" />
                 </motion.a>
 
                 <motion.a
                   href="https://linkedin.com/in/landry-tido-atikeng"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                  className="p-4 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary hover:bg-gray-300 dark:hover:bg-gray-700 transition-all shadow-sm hover:shadow-md"
                   variants={iconVariants}
                   whileHover="hover"
+                  aria-label="LinkedIn"
                 >
-                  <FiLinkedin className="w-5 h-5" />
+                  <FiLinkedin className="w-6 h-6" />
                 </motion.a>
 
                 <motion.a
                   href="https://wa.me/+32465362609"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                  className="p-4 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary hover:bg-gray-300 dark:hover:bg-gray-700 transition-all shadow-sm hover:shadow-md"
                   variants={iconVariants}
                   whileHover="hover"
+                  aria-label="WhatsApp"
                 >
-                  <FaWhatsapp className="w-5 h-5" />
+                  <FaWhatsapp className="w-6 h-6" />
                 </motion.a>
               </div>
             </div>
