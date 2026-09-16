@@ -1,10 +1,7 @@
 User-agent: *
 Allow: /
 
-# Bloque les dossiers sensibles
 Disallow: /api/
-Disallow: /_next/
 Disallow: /admin/
 
-# Sitemap
 Sitemap: https://landry-portfolio.vercel.app/sitemap.xml
