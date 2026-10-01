@@ -125,9 +125,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Landry Tido",
-              jobTitle: "Développeur Full-stack",
+              jobTitle: "Développeur & Analyste Fonctionnel",
               description:
-                "Développeur Full-stack spécialisé en React, Spring Boot, TypeScript et GraphQL",
+                "Développeur & Analyste Fonctionnel spécialisé en React, Spring Boot, TypeScript et GraphQL",
               url: "https://landry-portfolio.vercel.app",
               image: "https://landry-portfolio.vercel.app/images/profile.jpg",
               email: "landrytido727@gmail.com",
@@ -141,10 +141,6 @@ export default function RootLayout({
                 "https://github.com/Landrytido",
                 "https://linkedin.com/in/landry-tido-atikeng",
               ],
-              worksFor: {
-                "@type": "Organization",
-                name: "hdm network",
-              },
               alumniOf: {
                 "@type": "EducationalOrganization",
                 name: "EAFC Uccle",

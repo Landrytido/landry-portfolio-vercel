@@ -137,8 +137,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               variants={itemVariants}
             >
               {locale === "fr"
-                ? "Je suis Landry Tido, informaticien de gestion spécialisé en développement full-stack et en analyse fonctionnelle. Je conçois des applications robustes en React, Spring Boot, TypeScript et GraphQL, tout en maîtrisant la modélisation UML et Merise pour concevoir des systèmes d'information cohérents dès la phase d'analyse."
-                : "I'm Landry Tido, a business IT specialist in full-stack development and functional analysis. I build robust applications with React, Spring Boot, TypeScript and GraphQL, while mastering UML and Merise modeling to design coherent information systems from the analysis phase."}
+                ? "Je suis Landry Tido, informaticien de gestion diplômé de l'EAFC Uccle, spécialisé en développement full-stack et en analyse fonctionnelle. Je conçois des applications robustes en React, Spring Boot, TypeScript et GraphQL, tout en maîtrisant la modélisation UML et Merise pour concevoir des systèmes d'information cohérents dès la phase d'analyse."
+                : "I'm Landry Tido, a business IT specialist graduated from EAFC Uccle, specialized in full-stack development and functional analysis. I build robust applications with React, Spring Boot, TypeScript and GraphQL, while mastering UML and Merise modeling to design coherent information systems from the analysis phase."}
             </motion.p>
 
             <motion.p
@@ -146,8 +146,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               variants={itemVariants}
             >
               {locale === "fr"
-                ? "Actuellement, je travaille en entreprise sur des outils numériques avancés, tout en finalisant mon bachelier en informatique de gestion. Cette double compétence — technique et analytique — me permet de comprendre aussi bien les contraintes du code que les besoins des utilisateurs et des organisations."
-                : "Currently, I work in a company on advanced digital tools, while completing my bachelor's degree in business computing. This dual technical and analytical skill set allows me to understand both code constraints and the needs of users and organizations."}
+                ? "Actuellement en Master 1 Architecture des Systèmes Informatiques (MASI) à la Henallux, je renforce mes compétences en réseaux, sécurité et systèmes distribués. Cette double compétence — technique et analytique — me permet de comprendre aussi bien les contraintes du code que les besoins des utilisateurs et des organisations."
+                : "Currently enrolled in a Master 1 in IT Systems Architecture (MASI) at Henallux, I am deepening my skills in networking, security and distributed systems. This dual technical and analytical skill set allows me to understand both code constraints and the needs of users and organizations."}
             </motion.p>
 
             <motion.div

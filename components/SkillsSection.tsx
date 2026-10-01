@@ -13,6 +13,7 @@ import {
   SiPrisma,
   SiMysql,
   SiPostgresql,
+  SiMongodb,
   SiPostman,
   SiJira,
   SiCanva,
@@ -107,6 +108,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
       skills: [
         { name: "MySQL", icon: <SiMysql />, color: "#4479A1" },
         { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
+        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
       ],
     },
     {

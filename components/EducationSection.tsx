@@ -22,12 +22,26 @@ interface Education {
 const EducationSection: React.FC<EducationSectionProps> = ({ locale }) => {
   const educations: Education[] = [
     {
+      id: "master",
+      degreeFr: "Master 1 — Architecture des Systèmes Informatiques (MASI)",
+      degreeEn: "Master 1 — IT Systems Architecture (MASI)",
+      institution: "Henallux",
+      dateFr: "2026 – en cours",
+      dateEn: "2026 – present",
+      locationFr: "Namur, Belgique",
+      locationEn: "Namur, Belgium",
+      descriptionFr:
+        "Formation avancée en architecture logicielle, réseaux, sécurité informatique, systèmes distribués, Big Data et cryptographie.",
+      descriptionEn:
+        "Advanced training in software architecture, networking, IT security, distributed systems, Big Data and cryptography.",
+    },
+    {
       id: "bachelor",
-      degreeFr: "Informatique de Gestion",
-      degreeEn: "Business Computing",
+      degreeFr: "Bachelier en Informatique de Gestion",
+      degreeEn: "Bachelor in Business Computing",
       institution: "EAFC Uccle",
-      dateFr: "2022 – 2025",
-      dateEn: "2022 – 2025",
+      dateFr: "2022 – 2026",
+      dateEn: "2022 – 2026",
       locationFr: "Uccle, Belgique",
       locationEn: "Uccle, Belgium",
       descriptionFr:

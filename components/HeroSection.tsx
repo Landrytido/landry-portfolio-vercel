@@ -186,7 +186,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                 ? "Landry Tido, informaticien de gestion spécialisé en développement full-stack et en analyse fonctionnelle. Je conçois des applications en React, Spring Boot, TypeScript et GraphQL, tout en maîtrisant l'analyse des besoins métier, la modélisation UML & Merise et la gestion de projets Agile. Basé à Bruxelles, disponible pour vos projets freelance."
                 : "Landry Tido, business IT specialist in full-stack development and functional analysis. I build applications with React, Spring Boot, TypeScript and GraphQL, while mastering business requirements analysis, UML & Merise modeling, and Agile project management. Based in Brussels, available for freelance projects."}
             </p>
-            <span className="text-secondary font-medium text-base md:text-lg lg:text-xl inline-block">
+            <span className="text-gray-300 dark:text-gray-300 font-medium text-base md:text-lg lg:text-xl inline-block">
               React • Spring Boot • TypeScript • GraphQL • UML • Merise • Agile
             </span>
           </motion.div>
