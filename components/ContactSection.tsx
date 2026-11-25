@@ -209,8 +209,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ locale }) => {
             variants={itemVariants}
           >
             {locale === "fr"
-              ? "Vous avez un projet en tête ou une proposition ? N'hésitez pas à me contacter !"
-              : "Do you have a project in mind or a proposal? Feel free to contact me!"}
+              ? "Vous recrutez ou vous avez une proposition ? N'hésitez pas à me contacter !"
+              : "Are you hiring or do you have a proposal? Feel free to contact me!"}
           </motion.p>
         </motion.div>
 

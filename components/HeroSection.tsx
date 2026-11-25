@@ -145,7 +145,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
             </span>
 
             <span aria-hidden="true" className="flex items-center">
-              <span className="mr-2">{locale === "fr" ? "S" : "H"}</span>
+              <span className="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text mr-2">
+                {locale === "fr" ? "Salut !" : "Hello!"}
+              </span>
               <motion.div
                 className="inline-flex w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-secondary rounded-full justify-center items-center mx-1 md:mx-2 shadow-lg"
                 animate={emojiControls}
@@ -160,9 +162,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
                   🤓
                 </span>
               </motion.div>
-              <span className="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text ml-2">
-                {locale === "fr" ? "lut!" : "llo!"}
-              </span>
             </span>
           </motion.h1>
 
@@ -183,8 +182,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ locale }) => {
           >
             <p className="mb-4 md:mb-6">
               {locale === "fr"
-                ? "Landry Tido, informaticien de gestion spécialisé en développement full-stack et en analyse fonctionnelle. Je conçois des applications en React, Spring Boot, TypeScript et GraphQL, tout en maîtrisant l'analyse des besoins métier, la modélisation UML & Merise et la gestion de projets Agile. Basé à Bruxelles, disponible pour vos projets freelance."
-                : "Landry Tido, business IT specialist in full-stack development and functional analysis. I build applications with React, Spring Boot, TypeScript and GraphQL, while mastering business requirements analysis, UML & Merise modeling, and Agile project management. Based in Brussels, available for freelance projects."}
+                ? "Landry Tido, informaticien de gestion spécialisé en développement full-stack et en analyse fonctionnelle. Je conçois des applications en React, Spring Boot, TypeScript et GraphQL, tout en maîtrisant l'analyse des besoins métier, la modélisation UML & Merise et la gestion de projets Agile. Basé à Bruxelles, je cherche un premier poste en analyse fonctionnelle ou en développement."
+                : "Landry Tido, business IT specialist in full-stack development and functional analysis. I build applications with React, Spring Boot, TypeScript and GraphQL, while mastering business requirements analysis, UML & Merise modeling, and Agile project management. Based in Brussels, I am looking for a first role in functional analysis or development."}
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               {["React", "Spring Boot", "TypeScript", "GraphQL", "UML", "Merise", "Agile"].map((tech) => (

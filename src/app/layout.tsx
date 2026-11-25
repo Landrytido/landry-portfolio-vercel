@@ -14,17 +14,18 @@ export const metadata: Metadata = {
   title:
     "Landry Tido | Développeur Full-stack & Analyste Fonctionnel - Bruxelles",
   description:
-    "Portfolio de Landry Tido, informaticien de gestion spécialisé en développement full-stack (React, Spring Boot, TypeScript) et en analyse fonctionnelle (UML, Merise, Agile). Basé à Bruxelles. Disponible pour projets freelance.",
+    "Portfolio de Landry Tido, informaticien de gestion spécialisé en développement full-stack (React, Spring Boot, TypeScript) et en analyse fonctionnelle (UML, Merise, Agile). Basé à Bruxelles, à la recherche d'un premier poste.",
   keywords: [
     "Landry Tido",
     "développeur full-stack",
     "portfolio développeur",
     "React developer Bruxelles",
     "Spring Boot developer",
-    "TypeScript expert",
+    "TypeScript développeur",
     "GraphQL développeur",
     "développeur web Bruxelles",
-    "freelance developer Belgium",
+    "junior developer Belgium",
+    "analyste fonctionnel Bruxelles",
     "portfolio Landry Tido",
     "Java developer",
     "frontend backend developer",
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Portfolio Landry Tido",
     title: "Landry Tido | Portfolio Développeur Full-stack React & Spring Boot",
     description:
-      "Portfolio de Landry Tido, développeur full-stack expert en React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, spécialisé dans les applications web modernes et performantes. Disponible pour projets freelance.",
+      "Portfolio de Landry Tido, développeur junior et analyste fonctionnel : React, Spring Boot, TypeScript et GraphQL. Basé à Bruxelles, à la recherche d'un premier poste.",
     images: [
       {
         url: "/images/og-image.jpg",

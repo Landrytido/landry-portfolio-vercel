@@ -211,8 +211,8 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ locale }) => {
             variants={categoryVariants}
           >
             {locale === "fr"
-              ? "Du développement frontend/backend à l'analyse fonctionnelle et la gestion de projets — un profil complet au service de vos besoins."
-              : "From frontend/backend development to functional analysis and project management — a complete profile to serve your needs."}
+              ? "Du développement frontend et backend à l'analyse fonctionnelle et à la gestion de projets."
+              : "From frontend and backend development to functional analysis and project management."}
           </motion.p>
         </motion.div>
 

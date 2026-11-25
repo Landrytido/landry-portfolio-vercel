@@ -167,8 +167,8 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                 <div className="w-2 h-2 rounded-full bg-primary mr-2"></div>
                 <span className="text-gray-700 dark:text-gray-300">
                   {locale === "fr"
-                    ? "Disponible pour des projets freelance"
-                    : "Available for freelance projects"}
+                    ? "À la recherche d'un premier poste"
+                    : "Looking for a first role"}
                 </span>
               </div>
 
